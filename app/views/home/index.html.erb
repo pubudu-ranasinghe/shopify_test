@@ -9,10 +9,16 @@
   </script>
 <% end %>
 
-<h2>Products</h2>
-
-<ul>
-  <% @products.each do |product| %>
-    <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
-  <% end %>
-</ul>
+<div class="Polaris-Page">
+  <div class="Polaris-Page__Header">
+    <h1 class="Polaris-DisplayText Polaris-DisplayText--sizeLarge">Products</h1>
+  </div>
+  <div class="Polaris-Page__Content">
+    <p>Wide page content</p>
+    <ul>
+      <% @products.each do |product| %>
+        <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
